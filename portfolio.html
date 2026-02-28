@@ -1,81 +1,69 @@
 <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Portfolio - Douglas Nunes Mitsue</title>
 
-<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<head>
-		<title>Portfolio - Douglas Nunes Mitsue</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400" rel="stylesheet">
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
 
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400" rel="stylesheet">
-		<script type="text/javascript" src="js/scripts.js"></script>
-		<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<body>
 
+    <nav id="navigation" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+        </ul>
+    </nav>
 
-	</head>
+    <main class="main">
 
+        <ul class="caminho">
+            <li><a href="index.html">Home</a></li>
+            <li>&gt;</li>
+            <li>Portfolio</li>
+        </ul>
 
-	<body>
+        <h1>Portfolio</h1>
+        <p style="margin-bottom: 30px;">
+            Projetos focados em Engenharia de Dados, Arquitetura e Cloud Computing.
+        </p>
 
-			<div id="navigation" class="navigation">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="curriculo.html">Currículo</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
-				</ul>
-			</div>
+        <!-- Projeto 1 -->
+        <div style="background-image: url('img/arquitetura.png')" class="miniatura">
+            <a href="https://github.com/douglasmitsue/ai-systems-engineering-portfolio" target="_blank" rel="noopener noreferrer">
+                <div class="blackbox">
+                    <div class="blackbox-text">
+                        <h1>AI Systems Engineering Portfolio</h1>
+                        <h2>Arquitetura de Dados & Big Data</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
 
+        <!-- Projeto 2 -->
+        <div style="background-image: url('img/cloud.png')" class="miniatura">
+            <a href="cloud.html">
+                <div class="blackbox">
+                    <div class="blackbox-text">
+                        <h1>Cloud Computing</h1>
+                        <h2>Projetos em Ambiente Cloud</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
 
-						
-			<div class="main">
-				
-				
-				<ul class="caminho">
-					<li><a href="index.html">Home</a></li>
-					<li>></li>
-					<li>Portfolio</li>
-				</ul>
+        <br>
+        <a class="back-link" href="index.html">&larr; Voltar ao início</a>
 
-				<h1>Portfolio</h1>
+    </main>
 
-				
-				<div style="background-image: url('img/arquitetura.png')" class="miniatura">
-					<a href="arquitetura.html">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Big Data Projects</h1>
-							<h2>Big Data</h2>
-						</div>
-					</div>
-					</a>
-				</div>
-			
-				
-				
-				<div style="background-image: url('img/cloud.png')" class="miniatura">
-					<a href="cloud.html">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Cloud Computing</h1>
-							<h2>Projetos Cloud</h2>
-						</div>
-					</div>
-					</a>
-				</div>
-				
-		
-
-				
-
-				<br>
-				<a class="back-link" href="index.html">&larr; Voltar ao início<a>
-
-			</div>	
-
-			
-
-	</body>
-
+</body>
 </html>

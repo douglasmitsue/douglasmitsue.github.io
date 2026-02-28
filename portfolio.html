@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <title>Portfolio - Douglas Nunes Mitsue</title>
 
@@ -14,27 +14,29 @@
         .portfolio-container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
 
         .portfolio-header {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .portfolio-header h1 {
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #ffffff;
         }
 
         .portfolio-header p {
             font-weight: 300;
-            opacity: 0.8;
-            max-width: 700px;
+            max-width: 750px;
+            line-height: 1.7;
+            color: #e0e0e0;
         }
 
         .project-item {
-            padding: 30px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .project-item:last-child {
@@ -42,28 +44,32 @@
         }
 
         .project-title {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #ffffff;
         }
 
         .project-description {
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            max-width: 800px;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            max-width: 850px;
+            color: #d5d5d5; /* Changed for dark background contrast */
         }
 
         .project-stack {
             font-size: 14px;
             font-weight: 500;
-            opacity: 0.7;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            color: #b0b0b0;
+            letter-spacing: 0.5px;
         }
 
         .project-link {
             font-weight: 600;
             text-decoration: none;
+            color: #ffffff;
         }
 
         .project-link:hover {
@@ -72,12 +78,13 @@
 
         .back-link {
             display: inline-block;
-            margin-top: 40px;
+            margin-top: 50px;
+            color: #ffffff;
         }
 
         @media (max-width: 768px) {
             .portfolio-container {
-                padding: 40px 20px;
+                padding: 50px 20px;
             }
         }
     </style>
@@ -89,8 +96,8 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        <li><a href="curriculo.html">Currículo</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="curriculo.html">Resume</a></li>
+        <li><a href="contato.html">Contact</a></li>
         <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
     </ul>
 </nav>
@@ -98,23 +105,23 @@
 <div class="portfolio-container">
 
     <div class="portfolio-header">
-        <h1>Projetos</h1>
+        <h1>Selected Projects</h1>
         <p>
-            Projetos focados em Arquitetura de Dados, Engenharia de Dados e Sistemas de Inteligência Artificial.
-            Desenvolvimento de soluções escaláveis orientadas a dados e cloud.
+            Data Architecture, Data Engineering and AI Systems projects focused on building 
+            scalable, production-grade data platforms and intelligent systems.
         </p>
     </div>
 
-    <!-- Projeto 1 -->
+    <!-- Project 1 -->
     <div class="project-item">
         <div class="project-title">
             AI Systems Engineering Portfolio
         </div>
 
         <div class="project-description">
-            Repositório contendo projetos práticos de arquitetura de sistemas de dados e engenharia
-            aplicada a soluções de IA. Inclui modelagem de pipelines, estruturação de lakehouse,
-            boas práticas de governança e implementação de arquiteturas escaláveis.
+            A structured repository showcasing real-world data architecture implementations,
+            distributed data pipelines, lakehouse modeling strategies and AI-ready data systems.
+            Emphasis on scalability, governance and production best practices.
         </div>
 
         <div class="project-stack">
@@ -124,19 +131,19 @@
         <a class="project-link"
            href="https://github.com/douglasmitsue/ai-systems-engineering-portfolio"
            target="_blank" rel="noopener noreferrer">
-           Ver Projeto no GitHub →
+           View Project on GitHub →
         </a>
     </div>
 
-    <!-- Projeto 2 -->
+    <!-- Project 2 -->
     <div class="project-item">
         <div class="project-title">
-            Cloud Computing Projects
+            Cloud Architecture Projects
         </div>
 
         <div class="project-description">
-            Implementações práticas envolvendo arquitetura em nuvem, estratégias de escalabilidade,
-            infraestrutura como código e integração de serviços cloud para ambientes corporativos.
+            Practical implementations involving cloud-native architecture, infrastructure as code,
+            scalable environments and enterprise-ready deployment strategies.
         </div>
 
         <div class="project-stack">
@@ -144,11 +151,11 @@
         </div>
 
         <a class="project-link" href="cloud.html">
-           Ver Detalhes →
+           View Details →
         </a>
     </div>
 
-    <a class="back-link" href="index.html">&larr; Voltar ao início</a>
+    <a class="back-link" href="index.html">&larr; Back to Home</a>
 
 </div>
 

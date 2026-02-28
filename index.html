@@ -1,187 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Douglas Nunes Mitsue | Principal Data Architect</title>
+    <title>Douglas Mitsue | Principal Data & AI Architect</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO Core -->
+    <meta name="description" content="Principal Data Architect specializing in scalable data platforms, AI systems, Lakehouse architecture and enterprise cloud solutions.">
+    <meta name="keywords" content="Data Architect, AI Systems, Lakehouse, Azure, Spark, Big Data, Cloud Architecture">
+    <meta name="author" content="Douglas Nunes Mitsue">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Douglas Mitsue | Principal Data Architect">
+    <meta property="og:description" content="Scalable Data & AI Platforms. Enterprise Architecture. Lakehouse & Cloud Systems.">
+    <meta property="og:type" content="website">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 
-    <style>
-
-        /* ===== GLOBAL DARK THEME ===== */
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: radial-gradient(circle at top, #1a1d29, #0f1117 60%);
-            color: #ffffff;
-            animation: fadeIn 1.2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            opacity: 0.8;
-        }
-
-        /* ===== NAVIGATION ===== */
-        nav {
-            padding: 25px 50px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .profile-pic img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(255,255,255,0.1);
-            margin-bottom: 30px;
-            transition: transform 0.4s ease;
-        }
-
-        .profile-pic img:hover {
-            transform: scale(1.05);
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #7aa2ff;
-        }
-
-        .hero h2 {
-            font-size: 18px;
-            font-weight: 400;
-            color: #b8bcc8;
-            max-width: 850px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        /* ===== BADGES ===== */
-        .badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            max-width: 800px;
-        }
-
-        .badge {
-            padding: 8px 16px;
-            font-size: 13px;
-            font-weight: 500;
-            border-radius: 25px;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.12);
-            color: #d9dde7;
-            transition: all 0.3s ease;
-        }
-
-        .badge:hover {
-            background: rgba(122,162,255,0.15);
-            border-color: #7aa2ff;
-            transform: translateY(-2px);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-
-            nav {
-                padding: 20px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero h2 {
-                font-size: 16px;
-            }
-
-            .profile-pic img {
-                width: 130px;
-                height: 130px;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-<nav>
+<nav class="navigation">
     <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="curriculo.html">Resume</a></li>
-        <li><a href="contato.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
-<div class="hero">
+<section class="hero-showcase">
+    <div class="hero-content">
+        <h1>Engineering Enterprise-Scale Data & AI Platforms</h1>
+        <p>
+            Principal Data Architect designing scalable, AI-ready infrastructure 
+            for modern enterprises.
+        </p>
 
-    <div class="profile-pic">
-        <img src="img/douglas-profile.jpg" alt="Douglas Mitsue">
+        <div class="cta-buttons">
+            <a href="portfolio.html" class="btn-primary">View Projects</a>
+            <a href="contact.html" class="btn-secondary">Let's Connect</a>
+        </div>
     </div>
+</section>
 
-    <h1>Douglas <span>Nunes Mitsue</span></h1>
+<section class="impact-section">
+    <h2>Impact Metrics</h2>
 
-    <h2>
-        Principal Data Architect specializing in scalable data platforms, 
-        distributed systems and AI-ready architectures. 
-        Building enterprise-grade Lakehouse and Cloud solutions.
-    </h2>
+    <div class="metrics-grid">
+        <div class="metric">
+            <h3>50M+</h3>
+            <p>Records Processed Daily</p>
+        </div>
+
+        <div class="metric">
+            <h3>10+</h3>
+            <p>Enterprise Architectures Designed</p>
+        </div>
+
+        <div class="metric">
+            <h3>99.9%</h3>
+            <p>System Availability</p>
+        </div>
+
+        <div class="metric">
+            <h3>Cloud-Native</h3>
+            <p>Azure • AWS • Fabric</p>
+        </div>
+    </div>
+</section>
+
+<section class="stack-section">
+    <h2>Core Technology Stack</h2>
 
     <div class="badges">
         <span class="badge">Python</span>
-        <span class="badge">SQL</span>
         <span class="badge">Apache Spark</span>
+        <span class="badge">SQL</span>
         <span class="badge">Azure</span>
-        <span class="badge">Lakehouse Architecture</span>
+        <span class="badge">AWS</span>
         <span class="badge">Microsoft Fabric</span>
-        <span class="badge">Data Modeling</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Kubernetes</span>
+        <span class="badge">Lakehouse Architecture</span>
         <span class="badge">Distributed Systems</span>
-        <span class="badge">Cloud Architecture</span>
     </div>
+</section>
 
-</div>
+<section class="closing-section">
+    <h2>Building the Next Generation of Data Infrastructure</h2>
+    <p>
+        Designing resilient, scalable and AI-ready data platforms 
+        for enterprise transformation.
+    </p>
+</section>
 
 </body>
 </html>

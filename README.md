@@ -90,8 +90,8 @@ I’m open to remote or international roles where I can help organizations build
 ## 📫 Connect with Me
 
 - 🌐 Website: https://douglasmitsue.github.io
-- 💼 LinkedIn: [Add your LinkedIn here]
-- 📧 Email: [Add your email]
+- 💼 LinkedIn: https://www.linkedin.com/in/douglas-mitsue/
+- 📧 Email: contato@douglasmitsue.com
 
 ---
 

@@ -6,70 +6,129 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
-    <script type="text/javascript" src="js/scripts.js"></script>
 
     <style>
+
+        /* ===== GLOBAL DARK THEME ===== */
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0f1117;
+            color: #ffffff;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav li {
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== CONTAINER ===== */
         .portfolio-container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 70px 20px;
+            padding: 80px 20px;
         }
 
         .portfolio-header {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
 
         .portfolio-header h1 {
+            font-size: 36px;
             font-weight: 600;
             margin-bottom: 15px;
-            color: #ffffff;
         }
 
         .portfolio-header p {
             font-weight: 300;
             max-width: 750px;
             line-height: 1.7;
-            color: #e0e0e0;
+            color: #b8bcc8;
         }
 
+        /* ===== PROJECT SECTION ===== */
         .project-item {
-            padding: 40px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 50px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            transition: transform 0.3s ease;
         }
 
-        .project-item:last-child {
-            border-bottom: none;
+        .project-item:hover {
+            transform: translateY(-4px);
         }
 
         .project-title {
             font-size: 22px;
             font-weight: 600;
-            margin-bottom: 15px;
-            color: #ffffff;
+            margin-bottom: 18px;
         }
 
         .project-description {
             font-size: 16px;
             line-height: 1.7;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
+            color: #c5c9d4;
             max-width: 850px;
-            color: #d5d5d5; /* Changed for dark background contrast */
         }
 
-        .project-stack {
-            font-size: 14px;
+        /* ===== BADGES ===== */
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            font-size: 13px;
             font-weight: 500;
-            margin-bottom: 20px;
-            color: #b0b0b0;
-            letter-spacing: 0.5px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #d9dde7;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(255,255,255,0.15);
         }
 
         .project-link {
             font-weight: 600;
-            text-decoration: none;
-            color: #ffffff;
+            font-size: 14px;
+            letter-spacing: 0.5px;
         }
 
         .project-link:hover {
@@ -78,27 +137,37 @@
 
         .back-link {
             display: inline-block;
-            margin-top: 50px;
-            color: #ffffff;
+            margin-top: 60px;
+            font-size: 14px;
+            color: #b8bcc8;
         }
 
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
+            nav {
+                padding: 20px;
+            }
+
             .portfolio-container {
-                padding: 50px 20px;
+                padding: 60px 20px;
+            }
+
+            .portfolio-header h1 {
+                font-size: 28px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-<nav id="navigation" class="navigation">
+<nav>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="curriculo.html">Resume</a></li>
         <li><a href="contato.html">Contact</a></li>
-        <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
     </ul>
 </nav>
 
@@ -107,8 +176,8 @@
     <div class="portfolio-header">
         <h1>Selected Projects</h1>
         <p>
-            Data Architecture, Data Engineering and AI Systems projects focused on building 
-            scalable, production-grade data platforms and intelligent systems.
+            Data Architecture, Data Engineering and AI Systems projects focused on 
+            building scalable, production-grade data platforms and intelligent systems.
         </p>
     </div>
 
@@ -119,13 +188,17 @@
         </div>
 
         <div class="project-description">
-            A structured repository showcasing real-world data architecture implementations,
-            distributed data pipelines, lakehouse modeling strategies and AI-ready data systems.
-            Emphasis on scalability, governance and production best practices.
+            Real-world implementations of distributed data pipelines, lakehouse architectures, 
+            and AI-ready data platforms designed for scalability, governance and enterprise-grade performance.
         </div>
 
-        <div class="project-stack">
-            Stack: Python • SQL • Big Data • Distributed Systems • Cloud Architecture
+        <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">SQL</span>
+            <span class="badge">Apache Spark</span>
+            <span class="badge">Azure</span>
+            <span class="badge">Lakehouse</span>
+            <span class="badge">Data Modeling</span>
         </div>
 
         <a class="project-link"
@@ -142,12 +215,16 @@
         </div>
 
         <div class="project-description">
-            Practical implementations involving cloud-native architecture, infrastructure as code,
-            scalable environments and enterprise-ready deployment strategies.
+            Cloud-native architecture implementations including infrastructure as code,
+            scalable environments and enterprise deployment strategies.
         </div>
 
-        <div class="project-stack">
-            Stack: Cloud Platforms • DevOps • Infrastructure as Code • Scalable Systems
+        <div class="badges">
+            <span class="badge">Azure</span>
+            <span class="badge">Terraform</span>
+            <span class="badge">DevOps</span>
+            <span class="badge">Docker</span>
+            <span class="badge">CI/CD</span>
         </div>
 
         <a class="project-link" href="cloud.html">

@@ -1,150 +1,223 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Douglas Nunes Mitsue | Resume</title>
 
-<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<head>
-		<title>Currículo - Douglas Nunes Mitsue</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400" rel="stylesheet">
-		<script type="text/javascript" src="js/scripts.js"></script>
-		<meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <style>
 
-	</head>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: radial-gradient(circle at top, #1a1d29, #0f1117 60%);
+            color: #ffffff;
+            animation: fadeIn 1.2s ease-in-out;
+        }
 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-	<body>
+        nav {
+            padding: 25px 50px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
 
-			<div id="navigation" class="navigation">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="curriculo.html">Currículo</a></li>
-					<li><a href="contato.html">Contato</a></li>
-					<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
-				</ul>
-			</div>
-			
-			<div class="main">
-								
-				<ul class="caminho">
-					<li><a href="index.html">Home</a></li>
-					<li>></li>
-					<li>Currículo</li>
-				</ul>
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
 
-				<h1>Currículo</h1>
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-					
-					<h2>Dados Pessoais</h2>
-					<hr>
+        nav a:hover {
+            opacity: 0.8;
+        }
 
-						<img class="cv-pic" src="img/douglas-profile.jpg" alt="Foto de Douglas Mitsue">
-						<h3>Nome:</h3>
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
 
-							<p>Douglas Anderson Nunes Mitsue</p>
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
 
-						<h3>Data de Nascimento:</h3>
+        h2 {
+            font-size: 20px;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
 
-							<p>31/01/1972</p>
+        p {
+            color: #c5c9d4;
+            line-height: 1.7;
+        }
 
-						<h3>Residência:</h3>
+        .profile-header {
+            margin-bottom: 40px;
+        }
 
-							<p>Viana do Castelo, Portugal</p>
+        .profile-header h3 {
+            font-weight: 400;
+            color: #b8bcc8;
+            margin-top: 5px;
+        }
 
-						<h3 style="clear: left">Idiomas:</h3>
+        .badge-group {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-							<p>Português (Nativo)</p>
-							<p>Inglês (Avancado)</p>
-							<p>Espanhol (Intermediario)</p>
-							
-					
-					<h2>Sobre Mim</h2>
-					<hr>
+        .badge {
+            padding: 6px 14px;
+            font-size: 13px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: #d9dde7;
+            transition: 0.3s ease;
+        }
 
-							<p>Engenheiro de Computadores, CREA: 5063559478, desenvolvedor Full Stack. Pós Graduado em Desenvolvimento Web e Mobile.</p>
+        .badge:hover {
+            background: rgba(122,162,255,0.15);
+            border-color: #7aa2ff;
+        }
 
-							<p>Trabalho e tenho conhecimento em diversas tecnologias como HTML5, CSS3, UI(Figma), JavaScript, Angular, React, VueJS, JQuery, Knockout, Ember, Python, NodeJS, banco de dados (SQL Server, MySQL, Oracle, PostgreSQL, Redis, MongoDB).</p>
+        .section-block {
+            margin-bottom: 30px;
+        }
 
-							<p>Testes(JUnit, Mockito, Rspec, Capybara e Poltergeist). Mobile (IOS, Android e Ionic). Ruby on Rails, Java, TypeScript. DevOps (Git, Vagrant, Ansible, Docker, Kubernetes).</p>
-							<p>Microsserviços com Spring Boot usando AWS ECS, Cluster com AWS Fargate integrando com outros serviços como SNS, SQS e S3. Persistir eventos utilizando tabela do AWS DynamoDB, AWS RDS, consumir eventos em filas utilizando o AWS SQS, Criar um application load balancer, Monitorar serviços como SQS, ALB e DynamoDB através de seus gráficos e métricas, criar microsserviços com Spring boot baseados em containers Docker, construir um mecanismo de importação de arquivos utilizando o AWS S3, testar aplicações localmente, simulando os serviços da AWS com o LocalStack.</p>
-							<p>Criação de APIs utilizando Javascript ES6, Nodejs, Express Js e MongoDB, comunicação assíncrona entre serviços utilizando AMQP com RabbitMQ e fila de mensagens, comunicação entre containers utilizando Docker-Compose.Planejar, instalar e configurar um cluster Hadoop e seu ecosystem( Hive, Hbase, Zookeeper, Flume, Oozie, Ambari, Sqoop, Spark e Storm. configuração e utilização do HDFS e configurações avançadas do cluster Hadoop. Administração e manutenção do Hadoop e Spark. Machine Learning com Apache Mahout.</p>
-							<p>Conhecimento das principais distribuições do Hadoop( Cloudera e Hortonworks).</p>
-							<p>Infraestrutura de Big Data, Análise de Big Data.</p>
-							<p>Configurar o Microsoft Azure HDInsight ( Hadoop Microsoft ).</p>
-							<p>Implementar DataWarehouse com banco de dados Oracle e Amazon Redshift, construir DataLakes com hadoop e spark, Integração de DataWarehouse e DataLake, arquitetura de processamento de dados(Hive, Parquet,Solr, kafka, Elasticsearch), criptografia, cybersecurity, teste de invasão, prevenção a roubo de dados.</p>
-							<p>Cluster em nuvem com Amazon Web Services, microservices, arquitetura lambda, arquitetura e otimização de entrerprise Data Hubs, governança de dados, ETL, ELT e arquitetura de soluções.</p>
+        .job-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
 
-					
-					<h2>Educação</h2>
-					<hr>
+        .job-meta {
+            font-size: 14px;
+            color: #b8bcc8;
+            margin-bottom: 10px;
+        }
 
-						<h3>2023-Em andamento</h3>
+        .contact {
+            margin-top: 40px;
+        }
 
-							<p>Engenharia de Informatica / Mestrado / IPVC - Viana do Castelo - Portugal</p>
+        .back-link {
+            display: inline-block;
+            margin-top: 60px;
+            color: #b8bcc8;
+            font-size: 14px;
+            text-decoration: none;
+        }
 
-						<h3>2017</h3>
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+        }
 
-							<p>Curso / Pos Graduacao / Unisal - Brasil</p>
+    </style>
+</head>
 
-						<h3>2011</h3>
+<body>
 
-							<p>Engenharia / Computacao / Unip - Brasil</p>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contato.html">Contact</a></li>
+    </ul>
+</nav>
 
-					
-					<h2>Habilidades</h2>
-					<hr>
+<div class="container">
 
-						<h3>Tema 1</h3>
+    <div class="profile-header">
+        <h1>Douglas Nunes Mitsue</h1>
+        <h3>Principal Data Architect | Scalable Data & AI Platforms | Lakehouse • Cloud • Distributed Systems</h3>
+        <p>Location: Viana do Castelo, Portugal</p>
+    </div>
 
-							<p>Habilidade 1/Habilidade 2...</p>
+    <h2>Professional Summary</h2>
+    <p>
+        Computer Engineer and Principal Data Architect with extensive experience in enterprise-scale 
+        data platforms, distributed systems, cloud-native architectures and AI-ready data ecosystems. 
+        Strong background in data governance, lakehouse modeling, big data infrastructure and cloud environments.
+    </p>
 
-						<h3>Tema 1</h3>
+    <h2>Core Technologies</h2>
 
-							<p>Habilidade 1/Habilidade 2...</p>
+    <div class="badge-group">
+        <span class="badge">Python</span>
+        <span class="badge">SQL</span>
+        <span class="badge">Apache Spark</span>
+        <span class="badge">Hadoop Ecosystem</span>
+        <span class="badge">Azure</span>
+        <span class="badge">AWS</span>
+        <span class="badge">Microsoft Fabric</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Kubernetes</span>
+        <span class="badge">Terraform</span>
+        <span class="badge">Data Modeling</span>
+        <span class="badge">Lakehouse Architecture</span>
+        <span class="badge">Distributed Systems</span>
+    </div>
 
-						<h3>Tema 1</h3>
+    <h2>Education</h2>
 
-							<p>Habilidade 1/Habilidade 2...</p>
+    <div class="section-block">
+        <p><strong>MSc in Computer Engineering (Ongoing)</strong> – IPVC, Portugal</p>
+        <p><strong>Postgraduate in Web & Mobile Development</strong> – UNISAL, Brazil</p>
+        <p><strong>Bachelor in Computer Engineering</strong> – UNIP, Brazil</p>
+    </div>
 
-						<h3>Tema 1</h3>
+    <h2>Professional Experience</h2>
 
-							<p>Habilidade 1/Habilidade 2...</p>
+    <div class="section-block">
+        <div class="job-title">Senior / Principal Data Architect</div>
+        <div class="job-meta">Enterprise Data Platforms • Cloud Architecture • Big Data Infrastructure</div>
+        <p>
+            Design and implementation of enterprise-grade data hubs, scalable lakehouse architectures,
+            distributed data processing systems and AI-driven infrastructure across cloud environments.
+        </p>
+    </div>
 
-					
-					<h2>Experiência de Trabalho</h2>
-					<hr>
+    <h2>Languages</h2>
+    <p>Portuguese (Native) • English (Advanced) • Spanish (Intermediate)</p>
 
-						<h3>data-data</h3>
+    <h2>Contact</h2>
+    <div class="contact">
+        <p>Email: mitsuedouglas@gmail.com</p>
+        <p>Phone: +351 915533627</p>
+    </div>
 
-							<p>Função - empresa - local</p>
+    <a class="back-link" href="index.html">&larr; Back to Home</a>
 
-						<h3>data-data</h3>
+</div>
 
-							<p>Função - empresa - local</p>
-
-						<h3>data-data</h3>
-
-							<p>Função - empresa - local</p>
-
-						
-
-
-					<h2>Contato</h2>
-					<hr>
-
-							<p>mitsuedouglas@gmail.com</p>
-							<p>Telemovel: +351 915533627</p>
-
-
-				<a class="back-link" href="index.html">&larr; Voltar ao início</a>
-
-
-			</div>
-
-				
-
-	</body>
-
+</body>
 </html>

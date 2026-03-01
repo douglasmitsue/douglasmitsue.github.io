@@ -2,7 +2,7 @@
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            background-color: radial-gradient(circle at top, #1a1d29, #0f1117 60%);
+            background-color: #0f1117;
             color: #ffffff;
             animation: fadeIn 1.2s ease-in-out;
         }

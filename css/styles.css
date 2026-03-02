@@ -230,3 +230,16 @@ nav ul li a:hover {
              .timeline-item:hover .timeline-content {
                  transform: translateY(-5px);
              }
+
+           /* ===== SCROLL FADE-IN ANIMATION ===== */
+           
+           .timeline-item {
+               opacity: 0;
+               transform: translateY(40px);
+               transition: opacity 0.8s ease, transform 0.8s ease;
+           }
+           
+           .timeline-item.visible {
+               opacity: 1;
+               transform: translateY(0);
+           }

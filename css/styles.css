@@ -262,10 +262,10 @@ nav ul li a:hover {
            }
 
           footer {
-              text-align: center;
-              padding: 40px;
-              opacity: 0.6;
-          }
+             text-align: center;
+             padding: 40px;
+             background-color: rgba(0, 198, 255, 0.6);
+         }
         /* ===== METRICS SECTION ===== */
 
          .metrics {

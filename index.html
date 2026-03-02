@@ -70,6 +70,29 @@
             <p>Santander Technology Brazil</p>
         </div>
     </div>
+</div>
+
+<div class="metrics">
+
+    <div class="metric">
+        <h3><span class="counter" data-target="20">0</span>+</h3>
+        <p>Enterprise Data Platforms</p>
+    </div>
+
+    <div class="metric">
+        <h3><span class="counter" data-target="10">0</span>+ PB</h3>
+        <p>Data Processed</p>
+    </div>
+
+    <div class="metric">
+        <h3><span class="counter" data-target="5">0</span>+</h3>
+        <p>Countries Delivered</p>
+    </div>
+
+    <div class="metric">
+        <h3><span class="counter" data-target="99">0</span>.9%</h3>
+        <p>High Availability Architectures</p>
+    </div>
 
 </div>
 
@@ -107,6 +130,35 @@ document.addEventListener("DOMContentLoaded", function () {
     items.forEach(item => {
         observer.observe(item);
     });
+});
+</script>
+<script>
+/* COUNTER ANIMATION */
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".counter");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute("data-target");
+                const duration = 1500;
+                const startTime = performance.now();
+
+                function animate(currentTime) {
+                    const progress = Math.min((currentTime - startTime) / duration, 1);
+                    counter.innerText = Math.floor(progress * target);
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+                requestAnimationFrame(animate);
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.6 });
+    counters.forEach(counter => observer.observe(counter));
 });
 </script>
 

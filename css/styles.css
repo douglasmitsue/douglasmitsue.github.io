@@ -90,7 +90,7 @@ nav ul li a:hover {
         }
 
         .hero h1 span {
-            color: #7aa2ff;
+            color: #00c6ff;
         }
 
         .hero h2 {
@@ -151,20 +151,23 @@ nav ul li a:hover {
             /* ===== TIMELINE EXECUTIVE STYLE ===== */
 
              .timeline {
-                 position: relative;
-                 max-width: 800px;
-                 margin: 80px auto;
-                 padding: 20px 0;
-             }
-             
-             .timeline-title {
-                 text-align: center;
-                 font-weight: 600;
-                 font-size: 1.3rem;
-                 margin-bottom: 40px;
-                 letter-spacing: 2px;
-                 opacity: 0.8;
-             }
+                  position: relative;
+                  max-width: 800px;
+                  margin: 80px auto;
+              }
+              
+              .timeline-title {
+                  position: absolute;
+                  left: -180px;  /* move para a lateral */
+                  top: 0;
+                  font-weight: 600;
+                  font-size: 0.9rem;
+                  letter-spacing: 3px;
+                  text-transform: uppercase;
+                  opacity: 0.5;
+                  writing-mode: vertical-rl;
+                  transform: rotate(180deg);
+              }
              
              /* Linha central pontilhada */
              

@@ -1,245 +1,151 @@
- /* ===== GLOBAL DARK THEME ===== */
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: radial-gradient(circle at top, #1a1d29, #0f1117 60%);
-            color: #ffffff;
-            animation: fadeIn 1.2s ease-in-out;
-        }
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at top, #0f2027, #0a0a0a);
+    color: #ffffff;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            opacity: 0.8;
-        }
-
-          /* ===== NAVIGATION ===== */
 nav {
-    padding: 25px 50px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    gap: 30px;
 }
 
-/* Links do menu como badges */
-nav ul li a {
-    padding: 8px 16px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: #d9dde7;
-    transition: all 0.3s ease;
-    display: inline-block;
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
 }
 
-/* Hover igual aos badges */
-nav ul li a:hover {
-    background: rgba(122,162,255,0.15);
-    border-color: #7aa2ff;
+nav a:hover {
+    color: #00c6ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.profile-pic {
+    width: 140px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #00c6ff;
+}
+
+.statement {
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 80px auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(to bottom, #555, #555 6px, transparent 6px, transparent 14px);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    text-align: center;
+    margin: 60px 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: #666;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.timeline-item:hover .dot {
+    background: #00c6ff;
+    box-shadow: 0 0 10px #00c6ff;
+}
+
+.timeline-item:hover h3,
+.timeline-item:hover p {
     color: #ffffff;
-    transform: translateY(-2px);
 }
-       
 
-        /* ===== HERO SECTION ===== */
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+.metrics {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 20px;
+    flex-wrap: wrap;
+}
 
-        .profile-pic img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(255,255,255,0.1);
-            margin-bottom: 30px;
-            transition: transform 0.4s ease;
-        }
+.metric h2 {
+    font-size: 2.5rem;
+    color: #00c6ff;
+}
 
-        .profile-pic img:hover {
-            transform: scale(1.05);
-        }
+.expertise {
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .hero h1 span {
-            color: #7aa2ff;
-        }
+.card {
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    transition: 0.3s;
+}
 
-        .hero h2 {
-            font-size: 18px;
-            font-weight: 400;
-            color: #b8bcc8;
-            max-width: 850px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
+.card:hover {
+    background: rgba(0,198,255,0.15);
+    transform: translateY(-5px);
+}
 
-        /* ===== BADGES ===== */
-        .badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            max-width: 800px;
-        }
+.cta {
+    text-align: center;
+    padding: 100px 20px;
+}
 
-        .badge {
-            padding: 8px 16px;
-            font-size: 13px;
-            font-weight: 500;
-            border-radius: 25px;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.12);
-            color: #d9dde7;
-            transition: all 0.3s ease;
-        }
-
-        .badge:hover {
-            background: rgba(122,162,255,0.15);
-            border-color: #7aa2ff;
-            transform: translateY(-2px);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-
-            nav {
-                padding: 20px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero h2 {
-                font-size: 16px;
-            }
-
-            .profile-pic img {
-                width: 130px;
-                height: 130px;
-            }
-        }
-            /* ===== TIMELINE EXECUTIVE STYLE ===== */
-
-             .timeline {
-                 position: relative;
-                 max-width: 800px;
-                 margin: 80px auto;
-                 padding: 20px 0;
-             }
-             
-             .timeline-title {
-                 text-align: center;
-                 font-weight: 600;
-                 font-size: 1.3rem;
-                 margin-bottom: 40px;
-                 letter-spacing: 2px;
-                 opacity: 0.8;
-             }
-             
-             /* Linha central pontilhada */
-             
-             .timeline::before {
-                 content: "";
-                 position: absolute;
-                 left: 50%;
-                 top: 60px;
-                 bottom: 0;
-                 width: 2px;
-                 background: repeating-linear-gradient(
-                     to bottom,
-                     #666,
-                     #666 6px,
-                     transparent 6px,
-                     transparent 14px
-                 );
-                 transform: translateX(-50%);
-             }
-             
-             .timeline-item {
-                 position: relative;
-                 margin: 70px 0;
-                 text-align: center;
-             }
-             
-             .timeline-dot {
-                 width: 14px;
-                 height: 14px;
-                 background-color: #666;
-                 border-radius: 50%;
-                 margin: 0 auto;
-                 transition: all 0.3s ease;
-             }
-             
-             .timeline-content {
-                 margin-top: 20px;
-                 transition: all 0.3s ease;
-             }
-             
-             .timeline-content h3 {
-                 font-weight: 600;
-                 margin-bottom: 8px;
-             }
-             
-             .timeline-content p {
-                 opacity: 0.7;
-                 font-weight: 400;
-             }
-             
-             /* Hover elegante */
-             
-             .timeline-item:hover .timeline-dot {
-                 background-color: #00c6ff;
-                 box-shadow: 0 0 10px #00c6ff;
-             }
-             
-             .timeline-item:hover .timeline-content h3,
-             .timeline-item:hover .timeline-content p {
-                 color: #ffffff; /* mesma cor da descrição profissional */
-             }
-             
-             .timeline-item:hover .timeline-content {
-                 transform: translateY(-5px);
-             }
-
-           /* ===== SCROLL FADE-IN ANIMATION ===== */
-           
-           .timeline-item {
-               opacity: 0;
-               transform: translateY(40px);
-               transition: opacity 0.8s ease, transform 0.8s ease;
-           }
-           
-           .timeline-item.visible {
-               opacity: 1;
-               transform: translateY(0);
-           }
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.6;
+}

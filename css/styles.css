@@ -157,18 +157,27 @@ nav ul li a:hover {
               }
               
               .timeline-title {
-                  position: absolute;
-                  left: -180px;  /* move para a lateral */
-                  top: 0;
-                  font-weight: 600;
-                  font-size: 0.9rem;
-                  letter-spacing: 3px;
-                  text-transform: uppercase;
-                  opacity: 0.5;
-                  writing-mode: vertical-rl;
-                  transform: rotate(180deg);
+                   position: absolute;
+                   left: -200px;
+                   top: 40px;
+                   display: flex;
+                   align-items: center;
+                   gap: 12px;
+                   font-weight: 600;
+                   font-size: 0.9rem;
+                   letter-spacing: 3px;
+                   text-transform: uppercase;
+                   color: #00c6ff; /* mesma cor das métricas */
+               }
+
+              /* ponto azul ao lado do título */
+              .timeline-title::after {
+                  content: "";
+                  width: 8px;
+                  height: 8px;
+                  background: #00c6ff;
+                  border-radius: 50%;
               }
-             
              /* Linha central pontilhada */
              
              .timeline::before {

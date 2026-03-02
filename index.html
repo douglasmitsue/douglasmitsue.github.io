@@ -2,133 +2,109 @@
 <html lang="en">
 <head>
     <title>Douglas Nunes Mitsue | Principal Data Architect</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
+
+    <!-- CSS externo -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
 <nav>
-    <div class="logo">Douglas Mitsue</div>
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="curriculo.html">Resume</a></li>
+        <li><a href="contato.html">Contact</a></li>
     </ul>
 </nav>
 
-<section class="hero">
-    <img src="img/douglas-profile.jpg" alt="Douglas Mitsue" class="profile-pic">
+<div class="hero">
+
+    <div class="profile-pic">
+        <img src="img/douglas-profile.jpg" alt="Douglas Mitsue">
+    </div>
 
     <h1>Douglas <span>Nunes Mitsue</span></h1>
 
     <h2>
-        Principal Data Architect designing scalable enterprise data ecosystems, 
-        AI-ready platforms and distributed cloud architectures.
+        Principal Data Architect specializing in scalable data platforms, 
+        distributed systems and AI-ready architectures. 
+        Building enterprise-grade Lakehouse and Cloud solutions.
     </h2>
-</section>
+    <div class="timeline">
 
-<section class="statement">
-    Designing enterprise-grade data platforms that enable decision intelligence,
-    AI adoption and cloud scalability at national and global scale.
-</section>
-
-<section class="timeline">
-
-    <div class="timeline-title">Professional Journey</div>
+    <div class="timeline-title">Timeline</div>
 
     <div class="timeline-item">
-        <div class="dot"></div>
-        <div class="content">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
             <h3>NTT DATA Europe & Latam</h3>
-            <p>Data Architect – General Directorate of Justice Policy | ERS | BUPi | Tax Authority</p>
+            <p>Data Architect - General Directorate of Justice Policy | ERS | BUPi | Tax Authority</p>
         </div>
     </div>
 
     <div class="timeline-item">
-        <div class="dot"></div>
-        <div class="content">
-            <h3>Data Architect – BUPi Platform</h3>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+            <h3>Data Architect - BUPi Platform</h3>
         </div>
     </div>
 
     <div class="timeline-item">
-        <div class="dot"></div>
-        <div class="content">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
             <h3>Senior Lead Engineer / Data & Analytics</h3>
             <p>Inditex Spain</p>
         </div>
     </div>
 
     <div class="timeline-item">
-        <div class="dot"></div>
-        <div class="content">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
             <h3>Lead Technology Engineer / Data & Analytics</h3>
             <p>Santander Technology Brazil</p>
         </div>
     </div>
 
-</section>
+</div>
 
-<section class="metrics">
-    <div class="metric">
-        <h2>20+</h2>
-        <p>Enterprise Data Platforms</p>
+    <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">SQL</span>
+        <span class="badge">Apache Spark</span>
+        <span class="badge">Azure</span>
+         <span class="badge">AWS</span>
+        <span class="badge">Lakehouse Architecture</span>
+        <span class="badge">Microsoft Fabric</span>
+        <span class="badge">Data Modeling</span>
+        <span class="badge">Distributed Systems</span>
+        <span class="badge">Cloud Architecture</span>
+        <span class="badge">LLM-driven Analytics</span>
+        <span class="badge">Data Governance</span>
     </div>
-    <div class="metric">
-        <h2>10+ PB</h2>
-        <p>Data Processed</p>
-    </div>
-    <div class="metric">
-        <h2>5+</h2>
-        <p>Countries Delivered</p>
-    </div>
-    <div class="metric">
-        <h2>99.9%</h2>
-        <p>High-Availability Architectures</p>
-    </div>
-</section>
 
-<section class="expertise">
-    <h2>Architecture Expertise</h2>
-
-    <div class="cards">
-        <div class="card">Lakehouse Architecture</div>
-        <div class="card">Distributed Systems</div>
-        <div class="card">Cloud Data Platforms</div>
-        <div class="card">AI-Ready Architectures</div>
-        <div class="card">Data Modeling & Governance</div>
-        <div class="card">Enterprise Data Strategy</div>
-    </div>
-</section>
-
-<section class="cta">
-    <h2>Let’s Build the Next Generation Data Platform</h2>
-    <p>Open for strategic consulting and enterprise architecture engagements.</p>
-</section>
-
-<footer>
-    © 2026 Douglas Mitsue — Principal Data Architect
-</footer>
-
-<script>
+</div>
+    <script>
 document.addEventListener("DOMContentLoaded", function () {
-
     const items = document.querySelectorAll(".timeline-item");
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
+                observer.unobserve(entry.target); // anima apenas uma vez
             }
         });
-    }, { threshold: 0.2 });
-
-    items.forEach(item => observer.observe(item));
+    }, {
+        threshold: 0.2
+    });
+    items.forEach(item => {
+        observer.observe(item);
+    });
 });
 </script>
 

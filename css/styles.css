@@ -154,43 +154,49 @@ nav ul li a:hover {
                   position: relative;
                   max-width: 800px;
                   margin: 80px auto;
+                  padding-top: 60px; /* espaço para alinhar com título */
               }
               
               .timeline-title {
-                   position: absolute;
-                   left: -200px;
-                   top: 40px;
-                   display: flex;
-                   align-items: center;
-                   gap: 12px;
-                   font-weight: 600;
-                   font-size: 0.9rem;
-                   letter-spacing: 3px;
-                   text-transform: uppercase;
-                   color: #00c6ff; /* mesma cor das métricas */
-               }
-
-              /* ponto azul ao lado do título */
-              .timeline-title::after {
-                  content: "";
-                  width: 8px;
-                  height: 8px;
-                  background: #00c6ff;
-                  border-radius: 50%;
+                  position: absolute;
+                  left: calc(50% - 200px); /* controla distância lateral */
+                  top: 40px;
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  font-weight: 600;
+                  font-size: 0.9rem;
+                  letter-spacing: 3px;
+                  text-transform: uppercase;
+                  color: #00c6ff; /* mesma cor das métricas */
               }
+
+              /* Ponto azul alinhado com a linha central */
+
+                .timeline-title::after {
+                    content: "";
+                    position: absolute;
+                    right: -120px; /* ajusta até encostar exatamente na linha */
+                    width: 10px;
+                    height: 10px;
+                    background: #00c6ff;
+                    border-radius: 50%;
+                    animation: pulse 2s infinite ease-in-out;
+                }
              /* Linha central pontilhada */
              
              .timeline::before {
                  content: "";
                  position: absolute;
                  left: 50%;
-                 top: 60px;
+                 top: 80px; /* começa abaixo do ponto azul */
                  bottom: 0;
                  width: 2px;
+                 height: calc(100% - 80px);
                  background: repeating-linear-gradient(
                      to bottom,
-                     #666,
-                     #666 6px,
+                     #555,
+                     #555 6px,
                      transparent 6px,
                      transparent 14px
                  );
@@ -284,3 +290,18 @@ nav ul li a:hover {
              opacity: 0.7;
              letter-spacing: 1px;
          }
+
+          @keyframes pulse {
+              0% {
+                  transform: scale(1);
+                  box-shadow: 0 0 0 0 rgba(0,198,255, 0.7);
+              }
+              70% {
+                  transform: scale(1.2);
+                  box-shadow: 0 0 0 12px rgba(0,198,255, 0);
+              }
+              100% {
+                  transform: scale(1);
+                  box-shadow: 0 0 0 0 rgba(0,198,255, 0);
+              }
+          }

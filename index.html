@@ -8,76 +8,20 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 
+    <!-- CSS externo -->
     <link rel="stylesheet" href="css/styles.css">
-
-    <style>
-        /* ===== HEADER FIXO ===== */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 40px 80px; /* espaço para logo abaixo */
-            background-color: #0A1F44;
-            z-index: 1000;
-        }
-
-        /* ===== MENU (TOPO ESQUERDA) ===== */
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li a {
-            color: #FFFFFF;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        nav ul li a:hover {
-            color: #22D3EE;
-        }
-
-        /* ===== LOGO (ABAIXO À DIREITA) ===== */
-        .logo {
-            position: absolute;
-            top: 60px;   /* abaixo do menu */
-            right: 40px; /* canto direito */
-        }
-
-        .logo img {
-            height: 60px;
-        }
-
-        /* ===== AJUSTE HERO ===== */
-        .hero {
-            margin-top: 160px; /* compensar header maior */
-        }
-    </style>
 </head>
 
 <body>
 
-<header>
-    <!-- MENU -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="curriculo.html">Resume</a></li>
-            <li><a href="contato.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- LOGO ABAIXO DIREITA -->
-    <div class="logo">
-        <img src="img/logo-mitsue.png" alt="Mitsue Intelligence Logo">
-    </div>
-</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="curriculo.html">Resume</a></li>
+        <li><a href="contato.html">Contact</a></li>
+    </ul>
+</nav>
 
 <div class="hero">
 
@@ -92,72 +36,72 @@
         distributed systems and AI-ready architectures. 
         Building enterprise-grade Lakehouse and Cloud solutions.
     </h2>
-
     <div class="timeline">
 
-        <div class="timeline-title">Professional Journey</div>
+    <div class="timeline-title">Professional Journey</div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>NTT DATA Europe & Latam</h3>
-                <p>Data Architect - General Directorate of Justice Policy | ERS | BUPi | Tax Authority</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Data Architect - BUPi Platform</h3>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Senior Lead Engineer / Data & Analytics</h3>
-                <p>Inditex Spain</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Lead Technology Engineer / Data & Analytics</h3>
-                <p>Santander Technology Brazil</p>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="metrics">
-        <div class="metric">
-            <h3><span class="counter" data-target="20">0</span>+</h3>
-            <p>Enterprise Data Platforms</p>
-        </div>
-
-        <div class="metric">
-            <h3><span class="counter" data-target="10">0</span>+ PB</h3>
-            <p>Data Processed</p>
-        </div>
-
-        <div class="metric">
-            <h3><span class="counter" data-target="5">0</span>+</h3>
-            <p>Countries Delivered</p>
-        </div>
-
-        <div class="metric">
-            <h3><span class="counter" data-target="99">0</span>.9%</h3>
-            <p>High Availability Architectures</p>
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+            <h3>NTT DATA Europe & Latam</h3>
+            <p>Data Architect - General Directorate of Justice Policy | ERS | BUPi | Tax Authority</p>
         </div>
     </div>
+
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+            <h3>Data Architect - BUPi Platform</h3>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+            <h3>Senior Lead Engineer / Data & Analytics</h3>
+            <p>Inditex Spain</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+            <h3>Lead Technology Engineer / Data & Analytics</h3>
+            <p>Santander Technology Brazil</p>
+        </div>
+    </div>
+</div>
+
+<div class="metrics">
+
+    <div class="metric">
+        <h3><span class="counter" data-target="20">0</span>+</h3>
+        <p>Enterprise Data Platforms</p>
+    </div>
+
+    <div class="metric">
+        <h3><span class="counter" data-target="10">0</span>+ PB</h3>
+        <p>Data Processed</p>
+    </div>
+
+    <div class="metric">
+        <h3><span class="counter" data-target="5">0</span>+</h3>
+        <p>Countries Delivered</p>
+    </div>
+
+    <div class="metric">
+        <h3><span class="counter" data-target="99">0</span>.9%</h3>
+        <p>High Availability Architectures</p>
+    </div>
+
+</div>
 
     <div class="badges">
         <span class="badge">Python</span>
         <span class="badge">SQL</span>
         <span class="badge">Apache Spark</span>
         <span class="badge">Azure</span>
-        <span class="badge">AWS</span>
+         <span class="badge">AWS</span>
         <span class="badge">Lakehouse Architecture</span>
         <span class="badge">Microsoft Fabric</span>
         <span class="badge">Data Modeling</span>
@@ -166,12 +110,57 @@
         <span class="badge">LLM-driven Analytics</span>
         <span class="badge">Data Governance</span>
     </div>
-
 </div>
-
-<footer>
+    <footer>
     © 2026 Douglas Mitsue - Principal Data Architect
 </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".timeline-item");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // anima apenas uma vez
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+    items.forEach(item => {
+        observer.observe(item);
+    });
+});
+</script>
+<script>
+/* COUNTER ANIMATION */
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".counter");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute("data-target");
+                const duration = 1500;
+                const startTime = performance.now();
+
+                function animate(currentTime) {
+                    const progress = Math.min((currentTime - startTime) / duration, 1);
+                    counter.innerText = Math.floor(progress * target);
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+                requestAnimationFrame(animate);
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.6 });
+    counters.forEach(counter => observer.observe(counter));
+});
+</script>
 
 </body>
 </html>

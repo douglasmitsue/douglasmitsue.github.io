@@ -8,26 +8,21 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 
-    <!-- CSS externo -->
     <link rel="stylesheet" href="css/styles.css">
 
     <style>
-        /* HEADER FIXO */
+        /* ===== HEADER FIXO ===== */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 70px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
+            padding: 20px 40px 80px; /* espaço para logo abaixo */
             background-color: #0A1F44;
             z-index: 1000;
         }
 
-        /* MENU ESQUERDA */
+        /* ===== MENU (TOPO ESQUERDA) ===== */
         nav ul {
             list-style: none;
             display: flex;
@@ -47,14 +42,20 @@
             color: #22D3EE;
         }
 
-        /* LOGO DIREITA */
-        .logo img {
-            height: 40px;
+        /* ===== LOGO (ABAIXO À DIREITA) ===== */
+        .logo {
+            position: absolute;
+            top: 60px;   /* abaixo do menu */
+            right: 40px; /* canto direito */
         }
 
-        /* AJUSTE HERO (compensar header fixo) */
+        .logo img {
+            height: 60px;
+        }
+
+        /* ===== AJUSTE HERO ===== */
         .hero {
-            margin-top: 100px;
+            margin-top: 160px; /* compensar header maior */
         }
     </style>
 </head>
@@ -62,7 +63,7 @@
 <body>
 
 <header>
-    <!-- MENU ESQUERDA -->
+    <!-- MENU -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -72,7 +73,7 @@
         </ul>
     </nav>
 
-    <!-- LOGO DIREITA -->
+    <!-- LOGO ABAIXO DIREITA -->
     <div class="logo">
         <img src="img/logo-mitsue.png" alt="Mitsue Intelligence Logo">
     </div>
@@ -130,7 +131,6 @@
     </div>
 
     <div class="metrics">
-
         <div class="metric">
             <h3><span class="counter" data-target="20">0</span>+</h3>
             <p>Enterprise Data Platforms</p>
@@ -150,7 +150,6 @@
             <h3><span class="counter" data-target="99">0</span>.9%</h3>
             <p>High Availability Architectures</p>
         </div>
-
     </div>
 
     <div class="badges">
@@ -173,55 +172,6 @@
 <footer>
     © 2026 Douglas Mitsue - Principal Data Architect
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".timeline-item");
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    items.forEach(item => observer.observe(item));
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const counters = document.querySelectorAll(".counter");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = +counter.getAttribute("data-target");
-                const duration = 1500;
-                const startTime = performance.now();
-
-                function animate(currentTime) {
-                    const progress = Math.min((currentTime - startTime) / duration, 1);
-                    counter.innerText = Math.floor(progress * target);
-
-                    if (progress < 1) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        counter.innerText = target;
-                    }
-                }
-
-                requestAnimationFrame(animate);
-                observer.unobserve(counter);
-            }
-        });
-    }, { threshold: 0.6 });
-
-    counters.forEach(counter => observer.observe(counter));
-});
-</script>
 
 </body>
 </html>

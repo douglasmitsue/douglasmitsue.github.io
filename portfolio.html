@@ -1,98 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Portfolio - Douglas Nunes Mitsue</title>
+    <title>Portfolio | Douglas Mitsue</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
-    <!-- CSS externo -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
+    
+    <!-- BASE -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- NOVO CSS AVANÇADO -->
     <link rel="stylesheet" href="css/styles_portifolio.css">
-
 </head>
 
 <body>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="curriculo.html">Resume</a></li>
-        <li><a href="contato.html">Contact</a></li>
-    </ul>
-</nav>
+<canvas id="network"></canvas>
+<div class="grid-bg"></div>
 
-<div class="portfolio-container">
+<header>
+    <div class="logo-container">
+        <div class="cube-3d">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
 
-    <div class="portfolio-header">
-        <h1>Selected Projects</h1>
-        <p>
-            Data Architecture, Data Engineering and AI Systems projects focused on 
-            building scalable, production-grade data platforms and intelligent systems.
-        </p>
+        <div class="logo-text">
+            <span class="logo-main">Mitsue</span>
+            <span class="logo-sub">Intelligence</span>
+        </div>
     </div>
 
-    <!-- Project 1 -->
-    <div class="project-item">
-        <div class="project-title">
-            AI Systems Engineering Portfolio
-        </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="curriculo.html">Resume</a></li>
+            <li><a href="contato.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <div class="project-description">
-            Real-world implementations of distributed data pipelines, lakehouse architectures, 
-            and AI-ready data platforms designed for scalability, governance and enterprise-grade performance.
-        </div>
+<section class="hero fade">
+    <h1>
+        <span class="name-blue">Engineering</span> 
+        <span class="name-white">Portfolio</span>
+    </h1>
+
+    <h2>
+        Scalable data platforms, AI systems and cloud architectures built for production.
+    </h2>
+</section>
+
+<section class="projects fade">
+
+    <!-- CARD 1 -->
+<a href="https://github.com/douglasmitsue/ai-systems-engineering-portfolio" 
+   target="_blank" 
+   class="project-card">
+
+    <div class="card-glow"></div>
+
+    <div class="project-preview">
+        <img src="img/arquitetura.png">
+    </div>
+
+    <div class="project-content">
+        <h3>AI Systems Engineering</h3>
+        <p>Distributed pipelines, lakehouse architecture and AI-ready platforms.</p>
 
         <div class="badges">
             <span class="badge">Python</span>
-            <span class="badge">SQL</span>
-            <span class="badge">Apache Spark</span>
+            <span class="badge">Spark</span>
             <span class="badge">Azure</span>
-            <span class="badge">Lakehouse</span>
-            <span class="badge">Data Modeling</span>
         </div>
 
-        <a class="project-link"
-           href="https://github.com/douglasmitsue/ai-systems-engineering-portfolio"
-           target="_blank" rel="noopener noreferrer">
-           View Project on GitHub →
-        </a>
+        <span class="project-link">View Project →</span>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project-item">
-        <div class="project-title">
-            Cloud Architecture Projects
-        </div>
+</a>
 
-        <div class="project-description">
-            Enterprise-Grade Modern Data Platform Architect specialized in designing scalable, 
-            cloud-native, AI-enabled data ecosystems.
-        </div>
+    <!-- CARD 2 -->
+<a href="https://github.com/douglasmitsue/enterprise-data-platform-multicloud"" 
+   target="_blank" 
+   class="project-card">
+
+    <div class="card-glow"></div>
+
+    <div class="project-preview">
+        <img src="img/cloud.png">
+    </div>
+
+    <div class="project-content">
+        <h3>Multi-cloud architecture with governance, CI/CD pipelines and</h3>
+        <p>AI-enabled analytics.</p>
 
         <div class="badges">
             <span class="badge">AWS</span>
-            <span class="badge">Azure</span>
             <span class="badge">Terraform</span>
-            <span class="badge">DevOps</span>
-            <span class="badge">Docker</span>
-            <span class="badge">CI/CD</span>
             <span class="badge">Databricks</span>
-            <span class="badge">Lakehouse Architecture</span>
-            <span class="badge">Medallion Architecture</span>
-            <span class="badge">Data Governance</span>
-            <span class="badge">LLM-driven Analytics</span>
+			<span class="badge">CI/CD</span>
         </div>
 
-        <a class="project-link" href="https://github.com/douglasmitsue/enterprise-data-platform-multicloud">
-           View Project on GitHub →
-        </a>
+        <span class="project-link">View Project →</span>
     </div>
 
-    <a class="back-link" href="index.html">&larr; Back to Home</a>
+</a>
 
-</div>
+</section>
+
+<footer>
+    © 2026 Douglas Mitsue
+</footer>
+
+<script>
+
+/* SCROLL */
+const faders = document.querySelectorAll(".fade");
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+faders.forEach(el => observer.observe(el));
+
+/* GLOW FOLLOW MOUSE */
+document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("mousemove", e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty("--x", x + "px");
+        card.style.setProperty("--y", y + "px");
+    });
+});
+
+/* BACKGROUND */
+const canvas = document.getElementById("network");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+let particles = Array.from({length: 70}, () => ({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    vx: (Math.random()-0.5)*0.7,
+    vy: (Math.random()-0.5)*0.7
+}));
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if(p.x<0||p.x>canvas.width) p.vx*=-1;
+        if(p.y<0||p.y>canvas.height) p.vy*=-1;
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,2,0,Math.PI*2);
+        ctx.fillStyle="#5da9ff";
+        ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+}
+animate();
+
+</script>
 
 </body>
 </html>

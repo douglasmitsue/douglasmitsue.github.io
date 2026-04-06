@@ -1,92 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Douglas Nunes Mitsue | Resume</title>
+    <title>Douglas Mitsue | Resume</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
-    <!-- CSS externo -->
-    <link rel="stylesheet" href="css/styles_curriculo.css">
 
+    <!-- BASE -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- NOVO CSS -->
+    <link rel="stylesheet" href="css/styles_curriculo.css">
 </head>
 
 <body>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="curriculo.html">Resume</a></li>
-        <li><a href="contato.html">Contact</a></li>
-    </ul>
-</nav>
+<canvas id="network"></canvas>
+<div class="grid-bg"></div>
 
-<div class="container">
+<header>
+    <div class="logo-container">
+        <div class="cube-3d">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
 
-    <div class="profile-header">
-        <h1>Douglas Nunes Mitsue</h1>
-        <h3>Principal Data Architect | Scalable Data & AI Platforms | Lakehouse • Cloud • Distributed Systems</h3>
-        <p>Location: Europa, Remote</p>
+        <div class="logo-text">
+            <span class="logo-main">Mitsue</span>
+            <span class="logo-sub">Intelligence</span>
+        </div>
     </div>
 
-    <h2>Professional Summary</h2>
-    <p>
-        Computer Engineer and Principal Data Architect with extensive experience in enterprise-scale 
-        data platforms, distributed systems, cloud-native architectures and AI-ready data ecosystems. 
-        Strong background in data governance, lakehouse modeling, big data infrastructure and cloud environments.
-    </p>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="curriculo.html">Resume</a></li>
+            <li><a href="contato.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <h2>Core Technologies</h2>
+<section class="hero fade">
+    <h1>
+        <span class="name-blue">Douglas</span>
+        <span class="name-white">Mitsue</span>
+    </h1>
 
-    <div class="badge-group">
-        <span class="badge">Python</span>
-        <span class="badge">SQL</span>
-        <span class="badge">Apache Spark</span>
-        <span class="badge">Hadoop Ecosystem</span>
-        <span class="badge">Azure</span>
-        <span class="badge">AWS</span>
-        <span class="badge">Microsoft Fabric</span>
-        <span class="badge">Docker</span>
-        <span class="badge">Kubernetes</span>
-        <span class="badge">Terraform</span>
-        <span class="badge">Data Modeling</span>
-        <span class="badge">Lakehouse Architecture</span>
-        <span class="badge">Distributed Systems</span>
-    </div>
+    <h2>
+        Principal Data Architect | Scalable Data Platforms | AI Systems
+    </h2>
+</section>
 
-    <h2>Education</h2>
+<section class="resume-container fade">
 
-    <div class="section-block">
-        <p><strong>MSc in Computer Engineering (Ongoing)</strong> – IPVC, Portugal</p>
-        <p><strong>Postgraduate in Web & Mobile Development</strong> – UNISAL, Brazil</p>
-        <p><strong>Bachelor in Computer Engineering</strong> – UNIP, Brazil</p>
-    </div>
-
-    <h2>Professional Experience</h2>
-
-    <div class="section-block">
-        <div class="job-title">Senior / Principal Data Architect</div>
-        <div class="job-meta">Enterprise Data Platforms • Cloud Architecture • Big Data Infrastructure</div>
+    <!-- PROFILE CARD -->
+    <div class="resume-card">
+        <h3>Professional Summary</h3>
         <p>
-            Design and implementation of enterprise-grade data hubs, scalable lakehouse architectures,
-            distributed data processing systems and AI-driven infrastructure across cloud environments.
+            Principal Data Architect with extensive experience in enterprise-scale data platforms,
+            distributed systems and AI-ready ecosystems. Strong focus on scalability, governance
+            and production-grade architecture.
         </p>
     </div>
 
-    <h2>Languages</h2>
-    <p>Portuguese (Native) • English (Advanced) • Spanish (Intermediate)</p>
-
-    <h2>Contact</h2>
-    <div class="contact">
-        <p>Email: contato@mitsuetechsolutions.com</p>
-        <p>Phone: Email</p>
+    <!-- TECH -->
+    <div class="resume-card">
+        <h3>Core Technologies</h3>
+        <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">SQL</span>
+            <span class="badge">Spark</span>
+            <span class="badge">Azure</span>
+            <span class="badge">AWS</span>
+            <span class="badge">Databricks</span>
+            <span class="badge">Terraform</span>
+            <span class="badge">Kubernetes</span>
+        </div>
     </div>
 
-    <a class="back-link" href="index.html">&larr; Back to Home</a>
+    <!-- EXPERIENCE -->
+    <div class="resume-card">
+        <h3>Professional Experience</h3>
 
-</div>
+        <div class="timeline-item">
+            <h4>Principal Data Architect</h4>
+            <p>Enterprise data platforms, lakehouse and AI infrastructure.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h4>Senior Lead Engineer</h4>
+            <p>Distributed systems and large-scale pipelines.</p>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="resume-card">
+        <h3>Education</h3>
+        <p>MSc Computer Engineering – IPVC</p>
+        <p>Postgraduate Web & Mobile – UNISAL</p>
+        <p>Bachelor Computer Engineering – UNIP</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="resume-card contact-card">
+        <h3>Contact</h3>
+        <p>Email: contato@mitsuetechsolutions.com</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Douglas Mitsue
+</footer>
+
+<script>
+
+/* SCROLL */
+const faders = document.querySelectorAll(".fade");
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+faders.forEach(el => observer.observe(el));
+
+/* BACKGROUND */
+const canvas = document.getElementById("network");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+let particles = Array.from({length: 70}, () => ({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    vx: (Math.random()-0.5)*0.7,
+    vy: (Math.random()-0.5)*0.7
+}));
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if(p.x<0||p.x>canvas.width) p.vx*=-1;
+        if(p.y<0||p.y>canvas.height) p.vy*=-1;
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,2,0,Math.PI*2);
+        ctx.fillStyle="#5da9ff";
+        ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+}
+animate();
+
+</script>
 
 </body>
 </html>

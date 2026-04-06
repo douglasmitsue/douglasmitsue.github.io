@@ -1,165 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Douglas Nunes Mitsue | Principal Data Architect</title>
+    <title>Douglas Mitsue | Principal Data Architect</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
-
-    <!-- CSS externo -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="curriculo.html">Resume</a></li>
-        <li><a href="contato.html">Contact</a></li>
-    </ul>
-</nav>
+<canvas id="network"></canvas>
+<div class="grid-bg"></div>
 
-<div class="hero">
+<header>
+    <div class="logo-container">
+
+        <div class="cube-3d">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+
+        <div class="logo-text">
+            <span class="logo-main">Mitsue</span>
+            <span class="logo-sub">Intelligence</span>
+        </div>
+
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="curriculo.html">Resume</a></li>
+            <li><a href="contato.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero fade">
 
     <div class="profile-pic">
-        <img src="img/douglas-profile.jpg" alt="Douglas Mitsue">
+        <img src="img/douglas-profile.jpg">
     </div>
 
-    <h1>Douglas <span>Nunes Mitsue</span></h1>
+    <h1>
+        <span class="name-blue">Douglas Nunes</span> 
+        <span class="name-white">Mitsue</span>
+    </h1>
 
     <h2>
-        Principal Data Architect specializing in scalable data platforms, 
-        distributed systems and AI-ready architectures. 
-        Building enterprise-grade Lakehouse and Cloud solutions.
+        Principal Data Architect specializing in scalable data platforms,
+        distributed systems and AI-ready architectures.
     </h2>
-    <div class="timeline">
 
-    <div class="timeline-title">Professional Journey</div>
+</section>
 
-    <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-            <h3>NTT DATA Europe & Latam</h3>
-            <p>Data Architect - General Directorate of Justice Policy | ERS | BUPi | Tax Authority</p>
-        </div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-            <h3>Data Architect - BUPi Platform</h3>
-        </div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-            <h3>Senior Lead Engineer / Data & Analytics</h3>
-            <p>Inditex Spain</p>
-        </div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-            <h3>Lead Technology Engineer / Data & Analytics</h3>
-            <p>Santander Technology Brazil</p>
-        </div>
-    </div>
-</div>
-
-<div class="metrics">
+<section class="metrics fade">
 
     <div class="metric">
+        <div class="icon icon-db"></div>
         <h3><span class="counter" data-target="20">0</span>+</h3>
         <p>Enterprise Data Platforms</p>
     </div>
 
     <div class="metric">
+        <div class="icon icon-data-flow"></div>
         <h3><span class="counter" data-target="10">0</span>+ PB</h3>
         <p>Data Processed</p>
     </div>
 
     <div class="metric">
+        <div class="icon icon-globe"></div>
         <h3><span class="counter" data-target="5">0</span>+</h3>
         <p>Countries Delivered</p>
     </div>
 
-    <div class="metric">
+    <div class="metric metric-animated">
+        <div class="icon icon-shield"></div>
         <h3><span class="counter" data-target="99">0</span>.9%</h3>
         <p>High Availability Architectures</p>
     </div>
 
-</div>
+</section>
 
-    <div class="badges">
-        <span class="badge">Python</span>
-        <span class="badge">SQL</span>
-        <span class="badge">Apache Spark</span>
-        <span class="badge">Azure</span>
-         <span class="badge">AWS</span>
-        <span class="badge">Lakehouse Architecture</span>
-        <span class="badge">Microsoft Fabric</span>
-        <span class="badge">Data Modeling</span>
-        <span class="badge">Distributed Systems</span>
-        <span class="badge">Cloud Architecture</span>
-        <span class="badge">LLM-driven Analytics</span>
-        <span class="badge">Data Governance</span>
-    </div>
-</div>
-    <footer>
-    © 2026 Douglas Mitsue - Principal Data Architect
+<section class="timeline fade">
+    <h3 class="timeline-title">Professional Journey</h3>
+
+    <div class="timeline-item"><h4>Data Architect -  Competition Authority | UMP | Budgetary Entity</h4></div>
+    <div class="timeline-item"><h4>Data Architect - General Directorate of Justice Policy | ERS | BUPi | Tax Authority</h4></div>
+    <div class="timeline-item"><h4>Senior Lead Engineer - Inditex Spain</h4></div>
+    <div class="timeline-item"><h4>Lead Technology Engineer -  Santander Technology Brazil</h4></div>
+    <div class="timeline-item"><h4>Senior Java Development Analyst</h4></div>
+</section>
+
+<section class="badges fade">
+    <span class="badge">Python</span>
+    <span class="badge">SQL</span>
+    <span class="badge">Spark</span>
+    <span class="badge">Scala</span>
+    <span class="badge">Azure</span>
+    <span class="badge">AWS</span>
+    <span class="badge">GCP</span>
+    <span class="badge">Databricks</span>
+</section>
+
+<footer>
+    © 2026 Douglas Mitsue
 </footer>
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".timeline-item");
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // anima apenas uma vez
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-    items.forEach(item => {
-        observer.observe(item);
-    });
-});
-</script>
-<script>
-/* COUNTER ANIMATION */
-document.addEventListener("DOMContentLoaded", function () {
-    const counters = document.querySelectorAll(".counter");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = +counter.getAttribute("data-target");
-                const duration = 1500;
-                const startTime = performance.now();
 
-                function animate(currentTime) {
-                    const progress = Math.min((currentTime - startTime) / duration, 1);
-                    counter.innerText = Math.floor(progress * target);
-                    if (progress < 1) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        counter.innerText = target;
-                    }
-                }
-                requestAnimationFrame(animate);
-                observer.unobserve(counter);
-            }
-        });
-    }, { threshold: 0.6 });
-    counters.forEach(counter => observer.observe(counter));
+<script>
+/* COUNTER */
+document.querySelectorAll(".counter").forEach(counter => {
+    let target = +counter.dataset.target;
+    let count = 0;
+
+    function update() {
+        count += target / 50;
+        if (count < target) {
+            counter.innerText = Math.floor(count);
+            requestAnimationFrame(update);
+        } else {
+            counter.innerText = target;
+        }
+    }
+    update();
 });
+
+/* SCROLL */
+const faders = document.querySelectorAll(".fade");
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+faders.forEach(el => observer.observe(el));
+
+/* NETWORK GRAPH + DATA STREAM */
+const canvas = document.getElementById("network");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+let particles = Array.from({length: 70}, () => ({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    vx: (Math.random()-0.5)*0.7,
+    vy: (Math.random()-0.5)*0.7
+}));
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if(p.x<0||p.x>canvas.width) p.vx*=-1;
+        if(p.y<0||p.y>canvas.height) p.vy*=-1;
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,2,0,Math.PI*2);
+        ctx.fillStyle="#5da9ff";
+        ctx.fill();
+    });
+
+    for(let i=0;i<particles.length;i++){
+        for(let j=i;j<particles.length;j++){
+            let dx=particles[i].x-particles[j].x;
+            let dy=particles[i].y-particles[j].y;
+            let dist=Math.sqrt(dx*dx+dy*dy);
+
+            if(dist<120){
+                ctx.strokeStyle="rgba(93,169,255,0.08)";
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x,particles[i].y);
+                ctx.lineTo(particles[j].x,particles[j].y);
+                ctx.stroke();
+            }
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+animate();
 </script>
 
 </body>

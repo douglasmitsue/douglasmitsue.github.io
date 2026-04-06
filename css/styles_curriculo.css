@@ -1,151 +1,88 @@
-
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: radial-gradient(circle at top, #1a1d29, #0f1117 60%);
-            color: #ffffff;
-            animation: fadeIn 1.2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-          a {
-            color: #ffffff;
-            text-decoration: none;
-            }
-
-          a:hover {
-            opacity: 0.8;
-                  }
-
-                /* ===== NAVIGATION ===== */
-nav {
-    padding: 25px 50px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+/* GRID */
+.resume-container {
+    max-width:1100px;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
+    padding:20px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+/* CARD */
+.resume-card {
+    position:relative;
+    background:rgba(25,28,40,0.7);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(10px);
+    transition:all 0.4s ease;
+    overflow:hidden;
 }
 
-/* Links do menu como badges */
-nav ul li a {
-    padding: 8px 16px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: #d9dde7;
-    transition: all 0.3s ease;
-    display: inline-block;
+/* HOVER */
+.resume-card:hover {
+    transform:translateY(-8px) scale(1.02);
 }
 
-/* Hover igual aos badges */
-nav ul li a:hover {
-    background: rgba(122,162,255,0.15);
-    border-color: #7aa2ff;
-    color: #ffffff;
-    transform: translateY(-2px);
+/* GLOW */
+.resume-card::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 50% 50%, rgba(93,169,255,0.15), transparent 60%);
+    opacity:0;
+    transition:0.3s;
 }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
+.resume-card:hover::before {
+    opacity:1;
+}
 
-        h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
+/* TEXT */
+.resume-card h3 {
+    margin-bottom:12px;
+    font-size:18px;
+}
 
-        h2 {
-            font-size: 20px;
-            margin-top: 60px;
-            margin-bottom: 20px;
-            font-weight: 600;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 10px;
-        }
+.resume-card p {
+    color:#b8bcc8;
+    font-size:14px;
+    line-height:1.6;
+}
 
-        p {
-            color: #c5c9d4;
-            line-height: 1.7;
-        }
+/* BADGES */
+.badges {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
 
-        .profile-header {
-            margin-bottom: 40px;
-        }
+.badge {
+    background:#ffffff10;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:12px;
+    transition:0.3s;
+}
 
-        .profile-header h3 {
-            font-weight: 400;
-            color: #b8bcc8;
-            margin-top: 5px;
-        }
+.badge:hover {
+    background:#5da9ff33;
+    transform:translateY(-2px);
+}
 
-        .badge-group {
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+/* TIMELINE */
+.timeline-item {
+    margin-bottom:12px;
+}
 
-        .badge {
-            padding: 6px 14px;
-            font-size: 13px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.12);
-            color: #d9dde7;
-            transition: 0.3s ease;
-        }
+/* CONTACT */
+.contact-card {
+    border:1px solid rgba(93,169,255,0.3);
+}
 
-        .badge:hover {
-            background: rgba(122,162,255,0.15);
-            border-color: #7aa2ff;
-        }
-
-        .section-block {
-            margin-bottom: 30px;
-        }
-
-        .job-title {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .job-meta {
-            font-size: 14px;
-            color: #b8bcc8;
-            margin-bottom: 10px;
-        }
-
-        .contact {
-            margin-top: 40px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 60px;
-            color: #b8bcc8;
-            font-size: 14px;
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 28px;
-            }
-        }
+/* RESPONSIVO */
+@media(max-width:768px){
+    .resume-container {
+        grid-template-columns:1fr;
+    }
+}

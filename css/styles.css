@@ -30,6 +30,7 @@ header {
     justify-content:space-between;
     align-items:center;
     padding:20px 60px;
+    position: relative;
 }
 
 /* LOGO */
@@ -65,6 +66,7 @@ header {
     gap:25px;
     padding:0;
     margin:0;
+    z-index: 999;
 }
 
 .menu li {
@@ -74,10 +76,16 @@ header {
 .menu a {
     text-decoration:none;
     color:#aab0c0;
+    display: block;
+    position: relative;
+    z-index: 1001;
 }
 
 .menu a:hover {
     color:#5da9ff;
+}
+.menu-toggle {
+    z-index: 1000;
 }
 
 /* CUBE */
@@ -281,5 +289,52 @@ footer {
     }
     100% {
         left: 150%;
+    }
+}
+/* MENU TOGGLE (escondido no desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #5da9ff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(20, 24, 35, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 12px;
+        gap: 15px;
+
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+
+        transition: 0.3s ease;
+    }
+
+    .menu.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    .menu a {
+        font-size: 16px;
     }
 }

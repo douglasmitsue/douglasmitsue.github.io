@@ -1,0 +1,1 @@
+import{w as o,j as t}from"./chunk-5KNZJZUH-Dc5dHt8N.js";import{C as n}from"./Contact-Bx-7DySu.js";import"./PageHeader-CiWsdvJi.js";const p=o(function(){return t.jsx(t.Fragment,{children:t.jsx(n,{})})});export{p as default};
